@@ -24,7 +24,6 @@ public class Main {
 		ansers[5] = toi6();// 問6の回答結果
 
 		// それぞれの回答結果のまとめ処理
-
 	}
 
 	/**
@@ -34,13 +33,13 @@ public class Main {
 	 */
 	public static int toi1() {
 		// 回答番号
-		int answer = 0;
+		int ans1 = 0;
 		// 解答欄
-		String[] kaitouList = new String[] { "犬派", "猫派", "サーバルキャット派" };
+		String[] kaitouList = new String[] { "0010", "0100", "1111" };
 
 		// 質問内容を表示
 		System.out.println("問1");
-		System.out.println("あなたは犬派ですか？それとも猫派ですか？");
+		System.out.println("16進数で「F」を表すのはどれか");
 
 		// 解答欄を表示
 		for (int i = 0; i < kaitouList.length; i++) {
@@ -49,11 +48,19 @@ public class Main {
 
 		// ユーザーが答えを入力
 		System.out.println("回答：");
-		answer = Integer.valueOf(scan.next());
+		ans1 = Integer.valueOf(scan.next());
 
 		// 回答結果を出力
-		System.out.println("「" + kaitouList[answer] + "」が選択されました。");
-		return answer;
+		switch ( ans1){
+		case 1 : System.out.println("0010が選択されました");
+				break ;
+		case 2 : System.out.println("0100が選択されました");
+				break ;
+		case 3 : System.out.println("1111が選択されました");
+		        break ;
+		default : System.out.println("さぁ！飛ぶわよ！");
+		        System.exit(1);
+		}return ans1;
 	}
 
 	/**
