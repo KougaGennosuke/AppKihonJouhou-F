@@ -83,7 +83,25 @@ public class Main {
 	public static int toi3() {
 		// 回答番号
 		int answer = 0;
+		// 解答欄
+		String[] kaitouList = new String[] { "リエンジニアリング", "リバースエンジニアリング", "リストラクチャリング","リファクタリング" };
 
+		// 質問内容を表示
+		System.out.println("問3");
+		System.out.println("ソースコードやオブジェクトコードを解析して，プログラムの仕様と設計の情報を取り出す手法はどれか。");
+
+		// 解答欄を表示
+		for (int i = 0; i < kaitouList.length; i++) {
+			System.out.println("" + i + ":" + kaitouList[i]);
+		}
+
+		// ユーザーが答えを入力
+		System.out.println("回答：");
+		answer = scan.nextInt();
+
+		// 回答結果を出力
+		// 答えは「２」リバースエンジニアリング
+		System.out.println("「" + kaitouList[answer] + "」が選択されました。");
 		return answer;
 	}
 
